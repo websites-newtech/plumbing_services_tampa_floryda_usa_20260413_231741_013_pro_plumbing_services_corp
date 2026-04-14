@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Pro Plumbing Services Corp in Tampa Bay. Call (813) 238-9511 for a free quote, schedule service, or ask about emergency plumbing.">
+  <title>Contact | Pro Plumbing Services Corp Tampa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+</head>
+<body x-data="{ mobileOpen: false, formSent: false, formLoading: false }">
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Pro Plumbing Services Corp — Home">
+        <div class="logo-mark"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect width="36" height="36" rx="6" fill="#6FCFFB"/><path d="M10 26 L14 22 L14 16 C14 13.8 15.8 12 18 12 C20.2 12 22 13.8 22 16 L22 18 C22 19.1 22.9 20 24 20 L26 20" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="20" r="2" fill="#0a1628"/><path d="M18 12 L18 9" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+        <div class="logo-text"><span class="logo-name">Pro Plumbing</span><span class="logo-tagline">Services Corp.</span></div>
+      </a>
+      <nav class="navbar__links" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="residential.html" class="nav-link">Residential</a>
+        <a href="commercial.html" class="nav-link">Commercial</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link active" aria-current="page">Contact</a>
+        <a href="tel:8132389511" class="btn btn--accent btn--sm"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>(813) 238-9511</a>
+      </nav>
+      <button class="navbar__hamburger" @click="mobileOpen = !mobileOpen" :aria-expanded="mobileOpen.toString()" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu" :class="{ 'mobile-menu--open': mobileOpen }" x-show="mobileOpen" @click.away="mobileOpen = false" role="navigation" aria-label="Mobile navigation">
+      <a href="index.html" class="mobile-link" @click="mobileOpen = false">Home</a>
+      <a href="services.html" class="mobile-link" @click="mobileOpen = false">Services</a>
+      <a href="residential.html" class="mobile-link" @click="mobileOpen = false">Residential</a>
+      <a href="commercial.html" class="mobile-link" @click="mobileOpen = false">Commercial</a>
+      <a href="blog.html" class="mobile-link" @click="mobileOpen = false">Blog</a>
+      <a href="contact.html" class="mobile-link" @click="mobileOpen = false">Contact</a>
+      <a href="tel:8132389511" class="btn btn--accent mobile-cta">(813) 238-9511</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="contact-heading">
+      <div class="container">
+        <span class="section-eyebrow" data-animate>Get in Touch</span>
+        <h1 class="page-hero__title" id="contact-heading" data-animate>Contact Us</h1>
+        <p class="page-hero__body" data-animate>Ready to schedule service or get a free quote? Call us directly or fill out the form below and we'll be in touch promptly.</p>
+      </div>
+    </section>
+
+    <section class="contact-section section" aria-labelledby="contact-form-heading">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Contact Info -->
+          <div class="contact-info" data-animate>
+            <h2 class="contact-info__title" id="contact-form-heading">How to Reach Us</h2>
+
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="contact-method__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+                </div>
+                <div>
+                  <strong>Phone</strong>
+                  <a href="tel:8132389511">(813) 238-9511</a>
+                  <span>Call for fastest response</span>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="contact-method__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <strong>Hours</strong>
+                  <span>24/7 Emergency Service</span>
+                  <span>Standard: Mon–Sat 7am–7pm</span>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="contact-method__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <strong>Service Area</strong>
+                  <span>Tampa Bay Area, FL</span>
+                  <span>Including surrounding communities</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="emergency-card">
+              <div class="emergency-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <div>
+                <strong>Plumbing Emergency?</strong>
+                <p>Don't wait — call us now. Water damage gets worse every minute.</p>
+                <a href="tel:8132389511" class="btn btn--accent">Call (813) 238-9511</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrap" id="quote" data-animate>
+            <div x-show="!formSent">
+              <h2 class="contact-form-wrap__title">Request a Free Quote</h2>
+              <form
+                class="contact-form"
+                @submit.prevent="
+                  formLoading = true;
+                  setTimeout(() => { formLoading = false; formSent = true; }, 1200)
+                "
+                aria-label="Contact and quote request form"
+                novalidate
+              >
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="first-name">First Name <span aria-hidden="true">*</span></label>
+                    <input
+                      type="text"
+                      id="first-name"
+                      name="first-name"
+                      autocomplete="given-name"
+                      placeholder="John"
+                      required
+                      aria-required="true"
+                    >
+                  </div>
+                  <div class="form-group">
+                    <label for="last-name">Last Name <span aria-hidden="true">*</span></label>
+                    <input
+                      type="text"
+                      id="last-name"
+                      name="last-name"
+                      autocomplete="family-name"
+                      placeholder="Smith"
+                      required
+                      aria-required="true"
+                    >
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    autocomplete="tel"
+                    placeholder="(813) 000-0000"
+                    required
+                    aria-required="true"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    placeholder="john@example.com"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="service">Service Needed <span aria-hidden="true">*</span></label>
+                  <select id="service" name="service" required aria-required="true">
+                    <option value="" disabled selected>Select a service...</option>
+                    <option value="residential">Residential Plumbing</option>
+                    <option value="commercial">Commercial Plumbing</option>
+                    <option value="drain">Drain Cleaning</option>
+                    <option value="water-heater">Water Heater Service</option>
+                    <option value="repiping">Repiping</option>
+                    <option value="emergency">Emergency Service</option>
+                    <option value="other">Other / Not Sure</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Describe Your Issue <span aria-hidden="true">*</span></label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Please describe the plumbing problem you're experiencing..."
+                    required
+                    aria-required="true"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn--primary btn--lg btn--full"
+                  :disabled="formLoading"
+                  :aria-busy="formLoading.toString()"
+                >
+                  <span x-show="!formLoading">Send Request — Get Free Quote</span>
+                  <span x-show="formLoading" class="btn-loading">
+                    <svg class="spinner" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke-opacity="0.3"/><path d="M12 2a10 10 0 0 1 10 10" stroke-opacity="1"/></svg>
+                    Sending...
+                  </span>
+                </button>
+              </form>
+            </div>
+
+            <div x-show="formSent" class="form-success" role="alert">
+              <div class="form-success__icon" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h3>Request Sent!</h3>
+              <p>Thank you for reaching out. We'll review your request and call you back promptly. For urgent issues, please call us directly at <a href="tel:8132389511">(813) 238-9511</a>.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Pro Plumbing Services Corp — Home">
+          <div class="logo-mark"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect width="36" height="36" rx="6" fill="#6FCFFB"/><path d="M10 26 L14 22 L14 16 C14 13.8 15.8 12 18 12 C20.2 12 22 13.8 22 16 L22 18 C22 19.1 22.9 20 24 20 L26 20" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="20" r="2" fill="#0a1628"/><path d="M18 12 L18 9" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+          <div class="logo-text"><span class="logo-name">Pro Plumbing</span><span class="logo-tagline">Services Corp.</span></div>
+        </a>
+        <p class="footer__tagline">Family-owned plumbing excellence serving Tampa Bay since 1975.</p>
+        <address class="footer__contact">
+          <a href="tel:8132389511" class="footer__contact-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>(813) 238-9511</a>
+          <span class="footer__contact-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Tampa Bay Area, FL</span>
+        </address>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation — Services"><h3 class="footer__nav-title">Services</h3><ul class="footer__nav-list"><li><a href="residential.html">Residential Plumbing</a></li><li><a href="commercial.html">Commercial Plumbing</a></li><li><a href="services.html#drain-cleaning">Drain Cleaning</a></li><li><a href="services.html#water-heater">Water Heaters</a></li><li><a href="services.html#repiping">Repiping</a></li><li><a href="services.html#emergency">Emergency Service</a></li></ul></nav>
+      <nav class="footer__nav" aria-label="Footer navigation — Company"><h3 class="footer__nav-title">Company</h3><ul class="footer__nav-list"><li><a href="index.html">Home</a></li><li><a href="services.html">All Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="contact.html#quote">Free Quote</a></li></ul></nav>
+      <div class="footer__emergency"><h3 class="footer__nav-title">Emergency?</h3><p>We're available 24 hours a day, 7 days a week — even on holidays.</p><a href="tel:8132389511" class="btn btn--accent">Call Now</a><div class="footer__hours"><strong>Available 24/7</strong><span>Emergency Service Always On</span></div></div>
+    </div>
+    <div class="footer__bottom"><div class="container footer__bottom-inner"><p>&copy; <span id="year"></span> Pro Plumbing Services Corp. All rights reserved.</p><p>Serving Tampa Bay, FL since 1975</p></div></div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete plumbing services in Tampa Bay — residential, commercial, drain cleaning, water heaters, repiping, and 24/7 emergency service. Pro Plumbing Services Corp.">
+  <title>Plumbing Services Tampa | Pro Plumbing Services Corp</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+</head>
+<body x-data="{ mobileOpen: false }">
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Pro Plumbing Services Corp — Home">
+        <div class="logo-mark">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <rect width="36" height="36" rx="6" fill="#6FCFFB"/>
+            <path d="M10 26 L14 22 L14 16 C14 13.8 15.8 12 18 12 C20.2 12 22 13.8 22 16 L22 18 C22 19.1 22.9 20 24 20 L26 20" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="24" cy="20" r="2" fill="#0a1628"/>
+            <path d="M18 12 L18 9" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Pro Plumbing</span>
+          <span class="logo-tagline">Services Corp.</span>
+        </div>
+      </a>
+
+      <nav class="navbar__links" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link active" aria-current="page">Services</a>
+        <a href="residential.html" class="nav-link">Residential</a>
+        <a href="commercial.html" class="nav-link">Commercial</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="tel:8132389511" class="btn btn--accent btn--sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          (813) 238-9511
+        </a>
+      </nav>
+
+      <button class="navbar__hamburger" @click="mobileOpen = !mobileOpen" :aria-expanded="mobileOpen.toString()" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu" :class="{ 'mobile-menu--open': mobileOpen }" x-show="mobileOpen" @click.away="mobileOpen = false" role="navigation" aria-label="Mobile navigation">
+      <a href="index.html" class="mobile-link" @click="mobileOpen = false">Home</a>
+      <a href="services.html" class="mobile-link" @click="mobileOpen = false">Services</a>
+      <a href="residential.html" class="mobile-link" @click="mobileOpen = false">Residential</a>
+      <a href="commercial.html" class="mobile-link" @click="mobileOpen = false">Commercial</a>
+      <a href="blog.html" class="mobile-link" @click="mobileOpen = false">Blog</a>
+      <a href="contact.html" class="mobile-link" @click="mobileOpen = false">Contact</a>
+      <a href="tel:8132389511" class="btn btn--accent mobile-cta">(813) 238-9511</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Page Hero -->
+    <section class="page-hero" aria-labelledby="page-hero-heading">
+      <div class="container">
+        <span class="section-eyebrow" data-animate>What We Offer</span>
+        <h1 class="page-hero__title" id="page-hero-heading" data-animate>Tampa Plumbing Services</h1>
+        <p class="page-hero__body" data-animate>From emergency repairs to complete repiping — we handle every plumbing challenge for homeowners and businesses throughout Tampa Bay.</p>
+      </div>
+    </section>
+
+    <!-- Services Detail -->
+    <section class="services-detail section">
+      <div class="container">
+
+        <div id="residential" class="service-detail-item" data-animate>
+          <div class="service-detail-item__img">
+            <img src="assets/images/image_001.jpg" alt="Residential plumbing service being performed in a Tampa home" width="560" height="400" loading="lazy">
+          </div>
+          <div class="service-detail-item__content">
+            <span class="section-eyebrow">For Homeowners</span>
+            <h2>Residential Plumbing</h2>
+            <p>A backed-up toilet or clogged drain is extremely annoying to every homeowner. Our expert service techs will get you out of any messy situation — quickly and cleanly.</p>
+            <ul class="service-list">
+              <li>Toilet repair & replacement</li>
+              <li>Sink & faucet installation</li>
+              <li>Shower & bathtub plumbing</li>
+              <li>Pipe leak repair</li>
+              <li>Garbage disposal service</li>
+              <li>Whole-home plumbing inspections</li>
+            </ul>
+            <a href="residential.html" class="btn btn--primary">Learn More About Residential Service</a>
+          </div>
+        </div>
+
+        <div id="commercial" class="service-detail-item service-detail-item--reverse" data-animate>
+          <div class="service-detail-item__img">
+            <img src="assets/images/image_002.jpg" alt="Commercial plumbing work being performed in Tampa business" width="560" height="400" loading="lazy">
+          </div>
+          <div class="service-detail-item__content">
+            <span class="section-eyebrow">For Businesses</span>
+            <h2>Commercial Plumbing</h2>
+            <p>Downtime costs money. Our commercial plumbing team works efficiently to minimize disruption to your business operations while delivering lasting results.</p>
+            <ul class="service-list">
+              <li>Commercial pipe installation</li>
+              <li>Grease trap cleaning & repair</li>
+              <li>Backflow prevention</li>
+              <li>Commercial water heaters</li>
+              <li>Restroom & kitchen plumbing</li>
+              <li>Maintenance contracts available</li>
+            </ul>
+            <a href="commercial.html" class="btn btn--primary">Learn More About Commercial Service</a>
+          </div>
+        </div>
+
+        <div id="drain-cleaning" class="service-detail-item" data-animate>
+          <div class="service-detail-item__img">
+            <img src="assets/images/image_003.jpg" alt="Professional drain cleaning service being performed by Pro Plumbing Tampa" width="560" height="400" loading="lazy">
+          </div>
+          <div class="service-detail-item__content">
+            <span class="section-eyebrow">Clear & Clean</span>
+            <h2>Drain Cleaning</h2>
+            <p>Clogged drains are one of the most common — and damaging — plumbing problems. Our professional drain cleaning eliminates blockages safely without the corrosive chemicals that can damage your pipes.</p>
+            <ul class="service-list">
+              <li>Hydro-jetting</li>
+              <li>Drain snaking</li>
+              <li>Kitchen drain cleaning</li>
+              <li>Bathroom drain clearing</li>
+              <li>Sewer line cleaning</li>
+              <li>Odor elimination</li>
+            </ul>
+            <a href="contact.html" class="btn btn--primary">Schedule Drain Cleaning</a>
+          </div>
+        </div>
+
+        <div id="water-heater" class="service-detail-item service-detail-item--reverse" data-animate>
+          <div class="service-detail-item__img">
+            <img src="assets/images/image_004.jpg" alt="Water heater installation and repair service in Tampa by Pro Plumbing" width="560" height="400" loading="lazy">
+          </div>
+          <div class="service-detail-item__content">
+            <span class="section-eyebrow">Hot Water Solutions</span>
+            <h2>Water Heater Services</h2>
+            <p>Can you imagine living without hot water? We service, repair, and install all types of water heaters — including tankless models that can save up to 15% on your annual water bill.</p>
+            <ul class="service-list">
+              <li>Tank water heater repair</li>
+              <li>Tankless water heater installation</li>
+              <li>Water heater replacement</li>
+              <li>Anode rod replacement</li>
+              <li>Sediment flushing</li>
+              <li>Energy efficiency upgrades</li>
+            </ul>
+            <a href="contact.html" class="btn btn--primary">Get a Water Heater Quote</a>
+          </div>
+        </div>
+
+        <div id="repiping" class="service-detail-item" data-animate>
+          <div class="service-detail-item__img">
+            <img src="assets/images/image_005.png" alt="Whole-home repiping service in Tampa by Pro Plumbing Services" width="560" height="400" loading="lazy">
+          </div>
+          <div class="service-detail-item__content">
+            <span class="section-eyebrow">Long-Term Solution</span>
+            <h2>Repiping Services</h2>
+            <p>Old or corroded pipes can cause leaks, low water pressure, and water quality issues. Our repiping service replaces your entire plumbing system with modern, durable materials.</p>
+            <ul class="service-list">
+              <li>Whole-home repiping</li>
+              <li>PEX & copper pipe installation</li>
+              <li>Galvanized pipe replacement</li>
+              <li>Partial repiping</li>
+              <li>Post-repipe inspection</li>
+              <li>Minimal drywall disruption</li>
+            </ul>
+            <a href="contact.html" class="btn btn--primary">Request Repiping Quote</a>
+          </div>
+        </div>
+
+        <div id="emergency" class="service-detail-item service-detail-item--reverse service-detail-item--emergency" data-animate>
+          <div class="service-detail-item__img service-detail-item__img--emergency">
+            <div class="emergency-visual">
+              <div class="emergency-icon" aria-hidden="true">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <div class="emergency-number">24/7</div>
+              <p>Always Available</p>
+            </div>
+          </div>
+          <div class="service-detail-item__content">
+            <span class="section-eyebrow">Always Ready</span>
+            <h2>24/7 Emergency Service</h2>
+            <p>Plumbing problems don't wait for business hours. Burst pipes, flooding, sewer backups — these situations require immediate action. Call us any time, day or night.</p>
+            <ul class="service-list">
+              <li>Burst pipe repair</li>
+              <li>Flood response</li>
+              <li>Sewer backup clearing</li>
+              <li>Emergency water heater repair</li>
+              <li>Gas line emergencies</li>
+              <li>Available 365 days a year</li>
+            </ul>
+            <a href="tel:8132389511" class="btn btn--accent">Call Now — (813) 238-9511</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner" aria-labelledby="services-cta-heading">
+      <div class="cta-banner__bg" aria-hidden="true"></div>
+      <div class="container cta-banner__inner">
+        <div class="cta-banner__content" data-animate>
+          <span class="cta-banner__eyebrow">Ready to Get Started?</span>
+          <h2 class="cta-banner__title" id="services-cta-heading">Get a Free Quote Today</h2>
+          <p class="cta-banner__body">Call us and we'll provide you a quote on the spot. No hidden fees, no surprises.</p>
+          <div class="cta-banner__actions">
+            <a href="tel:8132389511" class="btn btn--accent btn--xl">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              Call (813) 238-9511
+            </a>
+            <a href="contact.html" class="btn btn--outline-white btn--xl">Schedule Online</a>
+          </div>
+        </div>
+        <div class="cta-banner__ghost" aria-hidden="true">PRO</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Pro Plumbing Services Corp — Home">
+          <div class="logo-mark">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <rect width="36" height="36" rx="6" fill="#6FCFFB"/>
+              <path d="M10 26 L14 22 L14 16 C14 13.8 15.8 12 18 12 C20.2 12 22 13.8 22 16 L22 18 C22 19.1 22.9 20 24 20 L26 20" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="24" cy="20" r="2" fill="#0a1628"/>
+              <path d="M18 12 L18 9" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">Pro Plumbing</span>
+            <span class="logo-tagline">Services Corp.</span>
+          </div>
+        </a>
+        <p class="footer__tagline">Family-owned plumbing excellence serving Tampa Bay since 1975.</p>
+        <address class="footer__contact">
+          <a href="tel:8132389511" class="footer__contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            (813) 238-9511
+          </a>
+          <span class="footer__contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Tampa Bay Area, FL
+          </span>
+        </address>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation — Services">
+        <h3 class="footer__nav-title">Services</h3>
+        <ul class="footer__nav-list">
+          <li><a href="residential.html">Residential Plumbing</a></li>
+          <li><a href="commercial.html">Commercial Plumbing</a></li>
+          <li><a href="services.html#drain-cleaning">Drain Cleaning</a></li>
+          <li><a href="services.html#water-heater">Water Heaters</a></li>
+          <li><a href="services.html#repiping">Repiping</a></li>
+          <li><a href="services.html#emergency">Emergency Service</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__nav" aria-label="Footer navigation — Company">
+        <h3 class="footer__nav-title">Company</h3>
+        <ul class="footer__nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">All Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="contact.html#quote">Free Quote</a></li>
+        </ul>
+      </nav>
+      <div class="footer__emergency">
+        <h3 class="footer__nav-title">Emergency?</h3>
+        <p>We're available 24 hours a day, 7 days a week — even on holidays.</p>
+        <a href="tel:8132389511" class="btn btn--accent">Call Now</a>
+        <div class="footer__hours">
+          <strong>Available 24/7</strong>
+          <span>Emergency Service Always On</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; <span id="year"></span> Pro Plumbing Services Corp. All rights reserved.</p>
+        <p>Serving Tampa Bay, FL since 1975</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

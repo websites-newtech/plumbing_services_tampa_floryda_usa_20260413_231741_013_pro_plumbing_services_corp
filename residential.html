@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Expert residential plumbing services in Tampa Bay. Toilets, drains, water heaters, repiping, and more. Pro Plumbing Services Corp — (813) 238-9511.">
+  <title>Residential Plumbing Tampa | Pro Plumbing Services Corp</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+</head>
+<body x-data="{ mobileOpen: false }">
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Pro Plumbing Services Corp — Home">
+        <div class="logo-mark">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect width="36" height="36" rx="6" fill="#6FCFFB"/><path d="M10 26 L14 22 L14 16 C14 13.8 15.8 12 18 12 C20.2 12 22 13.8 22 16 L22 18 C22 19.1 22.9 20 24 20 L26 20" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="20" r="2" fill="#0a1628"/><path d="M18 12 L18 9" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="logo-text"><span class="logo-name">Pro Plumbing</span><span class="logo-tagline">Services Corp.</span></div>
+      </a>
+      <nav class="navbar__links" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="residential.html" class="nav-link active" aria-current="page">Residential</a>
+        <a href="commercial.html" class="nav-link">Commercial</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="tel:8132389511" class="btn btn--accent btn--sm"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>(813) 238-9511</a>
+      </nav>
+      <button class="navbar__hamburger" @click="mobileOpen = !mobileOpen" :aria-expanded="mobileOpen.toString()" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu" :class="{ 'mobile-menu--open': mobileOpen }" x-show="mobileOpen" @click.away="mobileOpen = false" role="navigation" aria-label="Mobile navigation">
+      <a href="index.html" class="mobile-link" @click="mobileOpen = false">Home</a>
+      <a href="services.html" class="mobile-link" @click="mobileOpen = false">Services</a>
+      <a href="residential.html" class="mobile-link" @click="mobileOpen = false">Residential</a>
+      <a href="commercial.html" class="mobile-link" @click="mobileOpen = false">Commercial</a>
+      <a href="blog.html" class="mobile-link" @click="mobileOpen = false">Blog</a>
+      <a href="contact.html" class="mobile-link" @click="mobileOpen = false">Contact</a>
+      <a href="tel:8132389511" class="btn btn--accent mobile-cta">(813) 238-9511</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="resi-heading">
+      <div class="container">
+        <span class="section-eyebrow" data-animate>For Homeowners</span>
+        <h1 class="page-hero__title" id="resi-heading" data-animate>Residential Plumbing Services</h1>
+        <p class="page-hero__body" data-animate>Expert plumbing for every corner of your home. Our family-owned team treats your house like our own — with care, speed, and honest pricing.</p>
+        <a href="tel:8132389511" class="btn btn--accent btn--lg" data-animate>Call (813) 238-9511</a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="resi-services-heading">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <h2 class="section-title" id="resi-services-heading">Everything Your Home Needs</h2>
+          <p class="section-body">We handle all residential plumbing — from quick repairs to full system installations.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card" data-animate>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <h3 class="service-card__title">Toilet Repair & Replacement</h3>
+            <p class="service-card__body">Running toilets, clogs, broken flush mechanisms — we fix or replace it all. Don't let a faulty toilet drive up your water bill.</p>
+          </article>
+
+          <article class="service-card" data-animate>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 7H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M12 7V3"/><path d="M8 7V5"/><path d="M16 7V5"/><path d="M4 13v6a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-6"/></svg>
+            </div>
+            <h3 class="service-card__title">Sink & Faucet Services</h3>
+            <p class="service-card__body">Dripping faucets waste thousands of gallons per year. We repair or replace kitchen, bathroom, and utility sinks and faucets.</p>
+          </article>
+
+          <article class="service-card" data-animate>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.657 4.03 3 9 3s9-1.343 9-3V5"/><path d="M3 12c0 1.657 4.03 3 9 3s9-1.343 9-3"/></svg>
+            </div>
+            <h3 class="service-card__title">Water Heater Service</h3>
+            <p class="service-card__body">Tank or tankless, repair or replace — we ensure you always have reliable hot water. Tankless units can save up to 15% annually.</p>
+          </article>
+
+          <article class="service-card" data-animate>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12s2.545-5 7-5c4.454 0 7 5 7 5s-2.546 5-7 5c-4.455 0-7-5-7-5z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 class="service-card__title">Leak Detection & Repair</h3>
+            <p class="service-card__body">Hidden leaks cause structural damage and mold. Our experts locate and repair leaks fast, before they become expensive disasters.</p>
+          </article>
+
+          <article class="service-card" data-animate>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 class="service-card__title">Drain Cleaning</h3>
+            <p class="service-card__body">Slow or blocked drains? We use professional-grade equipment to clear the clog and keep it clear — no harsh chemicals needed.</p>
+          </article>
+
+          <article class="service-card" data-animate>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="service-card__title">Repiping</h3>
+            <p class="service-card__body">Old or galvanized pipes corrode over time. We replace your entire plumbing system with modern PEX or copper piping with minimal disruption.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Common Problems Section -->
+    <section class="problems-section section" aria-labelledby="problems-heading">
+      <div class="problems-section__bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-eyebrow">Don't Ignore These</span>
+          <h2 class="section-title" id="problems-heading">Common Plumbing Warning Signs</h2>
+          <p class="section-body">Catching plumbing problems early saves you money. Watch for these warning signs.</p>
+        </div>
+        <div class="problems-grid">
+          <div class="problem-item" data-animate>
+            <div class="problem-item__number" aria-hidden="true">01</div>
+            <h3>Dripping Faucets</h3>
+            <p>A single dripping faucet can waste over 3,000 gallons of water per year. Fix it before it fixes your wallet.</p>
+          </div>
+          <div class="problem-item" data-animate>
+            <div class="problem-item__number" aria-hidden="true">02</div>
+            <h3>Running Toilet</h3>
+            <p>A running toilet can waste up to 200 gallons of water daily, adding significantly to your monthly water bill.</p>
+          </div>
+          <div class="problem-item" data-animate>
+            <div class="problem-item__number" aria-hidden="true">03</div>
+            <h3>Low Water Pressure</h3>
+            <p>Sudden or gradual drops in pressure can indicate pipe corrosion, leaks, or main line problems that need professional diagnosis.</p>
+          </div>
+          <div class="problem-item" data-animate>
+            <div class="problem-item__number" aria-hidden="true">04</div>
+            <h3>Slow Draining</h3>
+            <p>Consistently slow drains signal a buildup or blockage deep in your pipes — a job best handled by a professional plumber.</p>
+          </div>
+          <div class="problem-item" data-animate>
+            <div class="problem-item__number" aria-hidden="true">05</div>
+            <h3>Foul Odors</h3>
+            <p>Sewer smell from drains or pipes indicates a blockage or potentially a broken sewer line. Don't ignore it — call us.</p>
+          </div>
+          <div class="problem-item" data-animate>
+            <div class="problem-item__number" aria-hidden="true">06</div>
+            <h3>Strange Pipe Noises</h3>
+            <p>Banging, rattling, or whistling pipes can indicate loose fittings, water hammer, or pressure issues requiring prompt attention.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner" aria-labelledby="resi-cta-heading">
+      <div class="cta-banner__bg" aria-hidden="true"></div>
+      <div class="container cta-banner__inner">
+        <div class="cta-banner__content" data-animate>
+          <span class="cta-banner__eyebrow">Ready to Fix Your Plumbing?</span>
+          <h2 class="cta-banner__title" id="resi-cta-heading">Let the Pros Handle It.</h2>
+          <p class="cta-banner__body">Call us today for a free, no-obligation quote. We'll be there fast and fix it right.</p>
+          <div class="cta-banner__actions">
+            <a href="tel:8132389511" class="btn btn--accent btn--xl"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>Call (813) 238-9511</a>
+            <a href="contact.html" class="btn btn--outline-white btn--xl">Schedule Online</a>
+          </div>
+        </div>
+        <div class="cta-banner__ghost" aria-hidden="true">HOME</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Pro Plumbing Services Corp — Home">
+          <div class="logo-mark"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect width="36" height="36" rx="6" fill="#6FCFFB"/><path d="M10 26 L14 22 L14 16 C14 13.8 15.8 12 18 12 C20.2 12 22 13.8 22 16 L22 18 C22 19.1 22.9 20 24 20 L26 20" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="20" r="2" fill="#0a1628"/><path d="M18 12 L18 9" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+          <div class="logo-text"><span class="logo-name">Pro Plumbing</span><span class="logo-tagline">Services Corp.</span></div>
+        </a>
+        <p class="footer__tagline">Family-owned plumbing excellence serving Tampa Bay since 1975.</p>
+        <address class="footer__contact">
+          <a href="tel:8132389511" class="footer__contact-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>(813) 238-9511</a>
+          <span class="footer__contact-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Tampa Bay Area, FL</span>
+        </address>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation — Services"><h3 class="footer__nav-title">Services</h3><ul class="footer__nav-list"><li><a href="residential.html">Residential Plumbing</a></li><li><a href="commercial.html">Commercial Plumbing</a></li><li><a href="services.html#drain-cleaning">Drain Cleaning</a></li><li><a href="services.html#water-heater">Water Heaters</a></li><li><a href="services.html#repiping">Repiping</a></li><li><a href="services.html#emergency">Emergency Service</a></li></ul></nav>
+      <nav class="footer__nav" aria-label="Footer navigation — Company"><h3 class="footer__nav-title">Company</h3><ul class="footer__nav-list"><li><a href="index.html">Home</a></li><li><a href="services.html">All Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="contact.html#quote">Free Quote</a></li></ul></nav>
+      <div class="footer__emergency"><h3 class="footer__nav-title">Emergency?</h3><p>We're available 24 hours a day, 7 days a week — even on holidays.</p><a href="tel:8132389511" class="btn btn--accent">Call Now</a><div class="footer__hours"><strong>Available 24/7</strong><span>Emergency Service Always On</span></div></div>
+    </div>
+    <div class="footer__bottom"><div class="container footer__bottom-inner"><p>&copy; <span id="year"></span> Pro Plumbing Services Corp. All rights reserved.</p><p>Serving Tampa Bay, FL since 1975</p></div></div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

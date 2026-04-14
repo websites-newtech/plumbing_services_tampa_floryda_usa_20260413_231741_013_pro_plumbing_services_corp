@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pro Plumbing Services Corp — Tampa's trusted plumbers since 1975. Residential & commercial plumbing, drain cleaning, water heaters, and 24/7 emergency service.">
+  <meta property="og:title" content="Pro Plumbing Services | Tampa Plumbers Since 1975">
+  <meta property="og:description" content="Family-owned Tampa plumbing company. Repairs, installations, drain cleaning, water heaters & emergency service. Call (813) 238-9511.">
+  <meta property="og:type" content="website">
+  <title>Pro Plumbing Services Corp | Tampa Plumbers Since 1975</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+</head>
+<body x-data="{ mobileOpen: false }">
+
+  <!-- Skip Link -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Pro Plumbing Services Corp — Home">
+        <div class="logo-mark">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <rect width="36" height="36" rx="6" fill="#6FCFFB"/>
+            <path d="M10 26 L14 22 L14 16 C14 13.8 15.8 12 18 12 C20.2 12 22 13.8 22 16 L22 18 C22 19.1 22.9 20 24 20 L26 20" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="24" cy="20" r="2" fill="#0a1628"/>
+            <path d="M18 12 L18 9" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Pro Plumbing</span>
+          <span class="logo-tagline">Services Corp.</span>
+        </div>
+      </a>
+
+      <nav class="navbar__links" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="residential.html" class="nav-link">Residential</a>
+        <a href="commercial.html" class="nav-link">Commercial</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="tel:8132389511" class="btn btn--accent btn--sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          (813) 238-9511
+        </a>
+      </nav>
+
+      <button
+        class="navbar__hamburger"
+        @click="mobileOpen = !mobileOpen"
+        :aria-expanded="mobileOpen.toString()"
+        aria-controls="mobile-menu"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="hamburger-line" :class="{ 'rotate-45 translate-y': mobileOpen }"></span>
+        <span class="hamburger-line" :class="{ 'opacity-0': mobileOpen }"></span>
+        <span class="hamburger-line" :class="{ '-rotate-45 -translate-y': mobileOpen }"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="mobile-menu"
+      :class="{ 'mobile-menu--open': mobileOpen }"
+      x-show="mobileOpen"
+      x-transition:enter="menu-enter"
+      x-transition:enter-start="menu-enter-start"
+      x-transition:enter-end="menu-enter-end"
+      x-transition:leave="menu-leave"
+      x-transition:leave-start="menu-leave-start"
+      x-transition:leave-end="menu-leave-end"
+      @click.away="mobileOpen = false"
+      role="navigation"
+      aria-label="Mobile navigation"
+    >
+      <a href="index.html" class="mobile-link" @click="mobileOpen = false">Home</a>
+      <a href="services.html" class="mobile-link" @click="mobileOpen = false">Services</a>
+      <a href="residential.html" class="mobile-link" @click="mobileOpen = false">Residential</a>
+      <a href="commercial.html" class="mobile-link" @click="mobileOpen = false">Commercial</a>
+      <a href="blog.html" class="mobile-link" @click="mobileOpen = false">Blog</a>
+      <a href="contact.html" class="mobile-link" @click="mobileOpen = false">Contact</a>
+      <a href="tel:8132389511" class="btn btn--accent mobile-cta">(813) 238-9511</a>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-label="Hero section">
+      <div class="hero__bg">
+        <img
+          src="assets/images/hero_001.jpg"
+          alt="Professional plumber working on pipes in a Tampa home"
+          class="hero__bg-img"
+          width="1920"
+          height="1080"
+        >
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="container hero__content">
+        <div class="hero__badge" data-animate>
+          <span class="badge-dot"></span>
+          Tampa's Trusted Plumbers Since 1975
+        </div>
+        <h1 class="hero__headline" data-animate>
+          <span class="hero__headline-line">We Fix Any</span>
+          <span class="hero__headline-line hero__headline-line--accent">Plumbing</span>
+          <span class="hero__headline-line">Problem.</span>
+        </h1>
+        <p class="hero__body" data-animate>
+          Family-owned and operated. From emergency repairs to full installations — residential and commercial — we've been getting Tampa back to normal for nearly 50 years.
+        </p>
+        <div class="hero__ctas" data-animate>
+          <a href="tel:8132389511" class="btn btn--accent btn--lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            Call (813) 238-9511
+          </a>
+          <a href="services.html" class="btn btn--outline btn--lg">View All Services</a>
+        </div>
+
+        <div class="hero__stats" data-animate>
+          <div class="hero__stat">
+            <span class="stat-number">48+</span>
+            <span class="stat-label">Years in Business</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Emergency Service</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Satisfaction Guaranteed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <div class="scroll-indicator"></div>
+      </div>
+    </section>
+
+    <!-- ===== TRUST BAR ===== -->
+    <section class="trust-bar" aria-label="Trust indicators">
+      <div class="container trust-bar__inner">
+        <div class="trust-item" data-animate>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Licensed & Insured</span>
+        </div>
+        <div class="trust-item" data-animate>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>24/7 Emergency Response</span>
+        </div>
+        <div class="trust-item" data-animate>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Family Owned Since 1975</span>
+        </div>
+        <div class="trust-item" data-animate>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Free Estimates</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services-section section" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-eyebrow">What We Do</span>
+          <h2 class="section-title" id="services-heading">Complete Plumbing Solutions<br>for Tampa Bay</h2>
+          <p class="section-body">From a dripping faucet to a full commercial repiping project — our expert technicians handle every job with precision and care.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card" data-animate>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="service-card__title">Residential Plumbing</h3>
+            <p class="service-card__body">Toilets, sinks, showers, water heaters, repiping, and every plumbing system in your home. We get you back to normal — fast.</p>
+            <a href="residential.html" class="service-card__link" aria-label="Learn more about residential plumbing services">
+              Learn More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card" data-animate>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="service-card__title">Commercial Plumbing</h3>
+            <p class="service-card__body">Full-scale commercial plumbing services for offices, restaurants, retail spaces, and industrial facilities throughout Tampa Bay.</p>
+            <a href="commercial.html" class="service-card__link" aria-label="Learn more about commercial plumbing services">
+              Learn More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card service-card--featured" data-animate>
+            <div class="service-card__badge">Emergency</div>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h3 class="service-card__title">Emergency Service</h3>
+            <p class="service-card__body">Plumbing disasters don't keep business hours. We're available 24 hours a day, 7 days a week, 365 days a year — including holidays.</p>
+            <a href="tel:8132389511" class="service-card__link service-card__link--cta">
+              Call Now — (813) 238-9511
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card" data-animate>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+            </div>
+            <h3 class="service-card__title">Drain Cleaning</h3>
+            <p class="service-card__body">Professional hydro-jetting and drain snaking to clear clogs, eliminate odors, and protect your pipes from recurring blockages.</p>
+            <a href="services.html#drain-cleaning" class="service-card__link" aria-label="Learn more about drain cleaning services">
+              Learn More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card" data-animate>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
+            </div>
+            <h3 class="service-card__title">Water Heater Services</h3>
+            <p class="service-card__body">Repair, replacement, and installation of tank and tankless water heaters. We'll help you find the most energy-efficient solution.</p>
+            <a href="services.html#water-heater" class="service-card__link" aria-label="Learn more about water heater services">
+              Learn More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card" data-animate>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M12 12h.01"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            </div>
+            <h3 class="service-card__title">Repiping Services</h3>
+            <p class="service-card__body">Old, corroded, or leaking pipes? We handle complete home and commercial repiping with minimal disruption to your daily routine.</p>
+            <a href="services.html#repiping" class="service-card__link" aria-label="Learn more about repiping services">
+              Learn More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+        </div>
+
+        <div class="services-cta" data-animate>
+          <a href="services.html" class="btn btn--primary btn--lg">View All Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY US ===== -->
+    <section class="why-us section" aria-labelledby="why-heading">
+      <div class="why-us__bg" aria-hidden="true"></div>
+      <div class="container why-us__inner">
+        <div class="why-us__image" data-animate>
+          <img
+            src="assets/images/image_001.jpg"
+            alt="Pro Plumbing technician performing expert pipe repair in Tampa"
+            width="600"
+            height="700"
+            loading="lazy"
+          >
+          <div class="why-us__image-badge">
+            <span class="badge-year">1975</span>
+            <span class="badge-label">Established</span>
+          </div>
+        </div>
+
+        <div class="why-us__content">
+          <span class="section-eyebrow" data-animate>Why Choose Us</span>
+          <h2 class="section-title" id="why-heading" data-animate>Tampa's Plumbing<br>Pros Since 1975</h2>
+          <p class="why-us__lead" data-animate>
+            We're not a franchise. We're your neighbors — a family-owned company that has been serving the Tampa Bay community for nearly five decades.
+          </p>
+
+          <ul class="why-list" aria-label="Reasons to choose Pro Plumbing">
+            <li class="why-item" data-animate>
+              <div class="why-item__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+              </div>
+              <div>
+                <strong>Upfront, Honest Pricing</strong>
+                <p>We give you a quote on the spot — no hidden fees, no surprises on your bill.</p>
+              </div>
+            </li>
+            <li class="why-item" data-animate>
+              <div class="why-item__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+              </div>
+              <div>
+                <strong>Expert Technicians</strong>
+                <p>All our plumbers are fully licensed, insured, and trained to handle any job — large or small.</p>
+              </div>
+            </li>
+            <li class="why-item" data-animate>
+              <div class="why-item__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+              </div>
+              <div>
+                <strong>Fast Response Times</strong>
+                <p>We arrive quickly and get to work immediately so you can get back to your normal routine.</p>
+              </div>
+            </li>
+            <li class="why-item" data-animate>
+              <div class="why-item__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+              </div>
+              <div>
+                <strong>Wide Service Range</strong>
+                <p>Residential, commercial, DIY products, and everything in between. One call covers it all.</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="why-us__ctas" data-animate>
+            <a href="contact.html" class="btn btn--primary">Get a Free Quote</a>
+            <a href="tel:8132389511" class="btn btn--ghost">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              (813) 238-9511
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials section" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-eyebrow">What Customers Say</span>
+          <h2 class="section-title" id="testimonials-heading">Trusted by Tampa<br>Homeowners & Businesses</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card" data-animate>
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#f0a500" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#f0a500" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#f0a500" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#f0a500" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#f0a500" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-text">"Pro Plumbing came out within an hour of my call. The technician was professional, explained everything clearly, and fixed our burst pipe without any drama. Highly recommend!"</p>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">B</div>
+              <div>
+                <cite class="testimonial-name">Bridgette M.</cite>
+                <span class="testimonial-location">Tampa, FL</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card" data-animate>
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#f0a500" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#f0a500" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#f0a500" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#f0a500" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#f0a500" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-text">"These guys are the real deal. Came out on a Sunday for an emergency, fixed the water heater issue, and didn't charge an outrageous amount. This is our go-to plumbing company from now on."</p>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">K</div>
+              <div>
+                <cite class="testimonial-name">K. La.</cite>
+                <span class="testimonial-location">Hollywood, FL</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card" data-animate>
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#f0a500" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#f0a500" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#f0a500" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#f0a500" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#f0a500" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-text">"Martina called, they were at our house in 45 minutes. Honest assessment, fair price, and the work was impeccable. I've used three other Tampa plumbers before — none come close to Pro Plumbing."</p>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">D</div>
+              <div>
+                <cite class="testimonial-name">Dan R.</cite>
+                <span class="testimonial-location">Tampa, FL</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BLOG PREVIEW ===== -->
+    <section class="blog-preview section" aria-labelledby="blog-heading">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-eyebrow">Knowledge Base</span>
+          <h2 class="section-title" id="blog-heading">Plumbing Tips &<br>Expert Advice</h2>
+          <p class="section-body">Stay informed with practical advice from Tampa's most experienced plumbing team.</p>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card" data-animate>
+            <a href="blog.html" class="blog-card__img-link" aria-label="Read: 6 Common Plumbing Problems You Shouldn't Ignore">
+              <img src="assets/images/hero_002.jpg" alt="Homeowner dealing with a clogged drain in Tampa" width="400" height="240" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Plumbing Repair</span>
+              <h3 class="blog-card__title">
+                <a href="blog.html">6 Common Plumbing Problems You Shouldn't Ignore</a>
+              </h3>
+              <p class="blog-card__excerpt">Clogged drains, running toilets, low water pressure — these issues won't fix themselves. Learn when to DIY and when to call a pro.</p>
+              <a href="blog.html" class="blog-card__link">Read Article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-animate>
+            <a href="blog.html" class="blog-card__img-link" aria-label="Read: How to Save Money by Upgrading Your Plumbing">
+              <img src="assets/images/hero_003.jpg" alt="Modern tankless water heater installation by Pro Plumbing" width="400" height="240" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Plumbing Services</span>
+              <h3 class="blog-card__title">
+                <a href="blog.html">How to Save Money by Upgrading Your Plumbing</a>
+              </h3>
+              <p class="blog-card__excerpt">A tankless water heater, low-flow toilet, and professional drain cleaning can save hundreds annually. Here's what you need to know.</p>
+              <a href="blog.html" class="blog-card__link">Read Article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-animate>
+            <a href="blog.html" class="blog-card__img-link" aria-label="Read: 5 Ways Professional Drain Cleaning Can Protect Your Home">
+              <img src="assets/images/image_002.jpg" alt="Professional drain cleaning service in Tampa by Pro Plumbing" width="400" height="240" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Drain Cleaning</span>
+              <h3 class="blog-card__title">
+                <a href="blog.html">5 Ways Professional Drain Cleaning Protects Your Home</a>
+              </h3>
+              <p class="blog-card__excerpt">From eliminating blockages to keeping your family safe, professional drain cleaning is an investment that pays for itself.</p>
+              <a href="blog.html" class="blog-card__link">Read Article →</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="blog-preview__cta" data-animate>
+          <a href="blog.html" class="btn btn--outline btn--lg">View All Articles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="cta-banner" aria-labelledby="cta-heading">
+      <div class="cta-banner__bg" aria-hidden="true"></div>
+      <div class="container cta-banner__inner">
+        <div class="cta-banner__content" data-animate>
+          <span class="cta-banner__eyebrow">24/7 Emergency Plumbing</span>
+          <h2 class="cta-banner__title" id="cta-heading">Plumbing Emergency?<br>We're Ready Right Now.</h2>
+          <p class="cta-banner__body">Don't wait — water damage gets worse by the minute. Our emergency team is on standby around the clock.</p>
+          <div class="cta-banner__actions">
+            <a href="tel:8132389511" class="btn btn--accent btn--xl">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              Call (813) 238-9511
+            </a>
+            <a href="contact.html" class="btn btn--outline-white btn--xl">Schedule Online</a>
+          </div>
+        </div>
+        <div class="cta-banner__ghost" aria-hidden="true">24/7</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Pro Plumbing Services Corp — Home">
+          <div class="logo-mark">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <rect width="36" height="36" rx="6" fill="#6FCFFB"/>
+              <path d="M10 26 L14 22 L14 16 C14 13.8 15.8 12 18 12 C20.2 12 22 13.8 22 16 L22 18 C22 19.1 22.9 20 24 20 L26 20" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="24" cy="20" r="2" fill="#0a1628"/>
+              <path d="M18 12 L18 9" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">Pro Plumbing</span>
+            <span class="logo-tagline">Services Corp.</span>
+          </div>
+        </a>
+        <p class="footer__tagline">Family-owned plumbing excellence serving Tampa Bay since 1975.</p>
+        <address class="footer__contact">
+          <a href="tel:8132389511" class="footer__contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            (813) 238-9511
+          </a>
+          <span class="footer__contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Tampa Bay Area, FL
+          </span>
+        </address>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer navigation — Services">
+        <h3 class="footer__nav-title">Services</h3>
+        <ul class="footer__nav-list">
+          <li><a href="residential.html">Residential Plumbing</a></li>
+          <li><a href="commercial.html">Commercial Plumbing</a></li>
+          <li><a href="services.html#drain-cleaning">Drain Cleaning</a></li>
+          <li><a href="services.html#water-heater">Water Heaters</a></li>
+          <li><a href="services.html#repiping">Repiping</a></li>
+          <li><a href="services.html#emergency">Emergency Service</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__nav" aria-label="Footer navigation — Company">
+        <h3 class="footer__nav-title">Company</h3>
+        <ul class="footer__nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">All Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="contact.html#quote">Free Quote</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__emergency">
+        <h3 class="footer__nav-title">Emergency?</h3>
+        <p>We're available 24 hours a day, 7 days a week — even on holidays.</p>
+        <a href="tel:8132389511" class="btn btn--accent">Call Now</a>
+        <div class="footer__hours">
+          <strong>Available 24/7</strong>
+          <span>Emergency Service Always On</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; <span id="year"></span> Pro Plumbing Services Corp. All rights reserved.</p>
+        <p>Serving Tampa Bay, FL since 1975</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

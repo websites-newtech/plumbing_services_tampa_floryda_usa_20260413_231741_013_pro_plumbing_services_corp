@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plumbing tips, advice, and news from Tampa's most trusted plumbing company. Pro Plumbing Services Corp blog — practical guidance for homeowners and businesses.">
+  <title>Plumbing Blog | Pro Plumbing Services Corp Tampa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+</head>
+<body x-data="{ mobileOpen: false }">
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Pro Plumbing Services Corp — Home">
+        <div class="logo-mark"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect width="36" height="36" rx="6" fill="#6FCFFB"/><path d="M10 26 L14 22 L14 16 C14 13.8 15.8 12 18 12 C20.2 12 22 13.8 22 16 L22 18 C22 19.1 22.9 20 24 20 L26 20" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="20" r="2" fill="#0a1628"/><path d="M18 12 L18 9" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+        <div class="logo-text"><span class="logo-name">Pro Plumbing</span><span class="logo-tagline">Services Corp.</span></div>
+      </a>
+      <nav class="navbar__links" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="residential.html" class="nav-link">Residential</a>
+        <a href="commercial.html" class="nav-link">Commercial</a>
+        <a href="blog.html" class="nav-link active" aria-current="page">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="tel:8132389511" class="btn btn--accent btn--sm"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>(813) 238-9511</a>
+      </nav>
+      <button class="navbar__hamburger" @click="mobileOpen = !mobileOpen" :aria-expanded="mobileOpen.toString()" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu" :class="{ 'mobile-menu--open': mobileOpen }" x-show="mobileOpen" @click.away="mobileOpen = false" role="navigation" aria-label="Mobile navigation">
+      <a href="index.html" class="mobile-link" @click="mobileOpen = false">Home</a>
+      <a href="services.html" class="mobile-link" @click="mobileOpen = false">Services</a>
+      <a href="residential.html" class="mobile-link" @click="mobileOpen = false">Residential</a>
+      <a href="commercial.html" class="mobile-link" @click="mobileOpen = false">Commercial</a>
+      <a href="blog.html" class="mobile-link" @click="mobileOpen = false">Blog</a>
+      <a href="contact.html" class="mobile-link" @click="mobileOpen = false">Contact</a>
+      <a href="tel:8132389511" class="btn btn--accent mobile-cta">(813) 238-9511</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="blog-hero-heading">
+      <div class="container">
+        <span class="section-eyebrow" data-animate>Knowledge Base</span>
+        <h1 class="page-hero__title" id="blog-hero-heading" data-animate>Plumbing Tips & News</h1>
+        <p class="page-hero__body" data-animate>Expert advice from Tampa's most experienced plumbing team. Stay informed and protect your home.</p>
+      </div>
+    </section>
+
+    <section class="section blog-full" aria-labelledby="articles-heading">
+      <div class="container">
+        <h2 class="sr-only" id="articles-heading">Blog Articles</h2>
+
+        <div class="blog-grid blog-grid--full">
+
+          <article class="blog-card blog-card--full" data-animate>
+            <a href="#" class="blog-card__img-link" aria-label="Read: 6 Common Plumbing Problems You Shouldn't Ignore">
+              <img src="assets/images/hero_001.jpg" alt="Plumber inspecting pipes for common plumbing problems" width="600" height="360" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Plumbing Repair</span>
+              <time class="blog-card__date" datetime="2021-10-27">October 27, 2021</time>
+              <h2 class="blog-card__title"><a href="#">6 Common Plumbing Problems You Shouldn't Ignore</a></h2>
+              <p class="blog-card__excerpt">Clogged drains, running toilets, low water pressure, dripping taps — these issues won't fix themselves. Here are six of the most common plumbing problems and what you can do about them before calling a professional.</p>
+              <a href="#" class="blog-card__link">Read Full Article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card blog-card--full" data-animate>
+            <a href="#" class="blog-card__img-link" aria-label="Read: 3 Reasons to Contact Your Tampa Plumbing Contractor">
+              <img src="assets/images/hero_002.jpg" alt="Tampa plumbing contractor performing water leak repair" width="600" height="360" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Plumbing Services</span>
+              <time class="blog-card__date" datetime="2021-05-06">May 6, 2021</time>
+              <h2 class="blog-card__title"><a href="#">3 Reasons to Contact Your Tampa Plumbing Contractor</a></h2>
+              <p class="blog-card__excerpt">Common household plumbing issues such as leaks can be expensive and wasteful. Approximately 10% of US households have leaks wasting up to 90 gallons of water per day. Here's when and why to call a professional.</p>
+              <a href="#" class="blog-card__link">Read Full Article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card blog-card--full" data-animate>
+            <a href="#" class="blog-card__img-link" aria-label="Read: How to Save Money by Upgrading Your Plumbing">
+              <img src="assets/images/hero_003.jpg" alt="Modern plumbing upgrade showing energy efficient water heater" width="600" height="360" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Plumbing Services</span>
+              <time class="blog-card__date" datetime="2020-11-20">November 20, 2020</time>
+              <h2 class="blog-card__title"><a href="#">How to Save Money by Upgrading Your Plumbing</a></h2>
+              <p class="blog-card__excerpt">$6 billion worth of water is wasted annually due to leaky faucets and running toilets. A tankless water heater, low-flow toilet, and professional drain cleaning can collectively save hundreds of dollars each year.</p>
+              <a href="#" class="blog-card__link">Read Full Article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card blog-card--full" data-animate>
+            <a href="#" class="blog-card__img-link" aria-label="Read: 5 Ways Professional Drain Cleaning Services Can Protect Your Home">
+              <img src="assets/images/image_001.jpg" alt="Professional drain cleaning service clearing blocked pipe" width="600" height="360" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Drain Cleaning</span>
+              <time class="blog-card__date" datetime="2020-12-23">December 23, 2020</time>
+              <h2 class="blog-card__title"><a href="#">5 Ways Professional Drain Cleaning Can Protect Your Home</a></h2>
+              <p class="blog-card__excerpt">Most homeowners have a troubling blind spot when it comes to drain pipe maintenance. Professional drain cleaning eliminates blockages, foul odors, and health risks — here are five key benefits.</p>
+              <a href="#" class="blog-card__link">Read Full Article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card blog-card--full" data-animate>
+            <a href="#" class="blog-card__img-link" aria-label="Read: Chemical Drain Cleaners: What Are the Dangers?">
+              <img src="assets/images/image_002.jpg" alt="Chemical drain cleaner bottles showing warning labels" width="600" height="360" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Safety</span>
+              <time class="blog-card__date" datetime="2021-02-10">February 10, 2021</time>
+              <h2 class="blog-card__title"><a href="#">Chemical Drain Cleaners: What Are the Dangers of Using Them?</a></h2>
+              <p class="blog-card__excerpt">That bottle of chemical drain cleaner seems like an easy fix — but the harsh chemicals are corrosive, weakening your drain pipes over time and potentially leading to leaks, burst pipes, and costly damage to your home.</p>
+              <a href="#" class="blog-card__link">Read Full Article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card blog-card--full" data-animate>
+            <a href="#" class="blog-card__img-link" aria-label="Read: 6 Key Things to Look for When Hiring a Residential Plumbing Contractor">
+              <img src="assets/images/image_003.jpg" alt="Homeowner reviewing credentials of a residential plumbing contractor" width="600" height="360" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Plumbing Contractor</span>
+              <time class="blog-card__date" datetime="2021-03-15">March 15, 2021</time>
+              <h2 class="blog-card__title"><a href="#">6 Key Things to Look for When Hiring a Residential Plumbing Contractor</a></h2>
+              <p class="blog-card__excerpt">Not all plumbers are created equal. Before hiring a residential plumbing contractor, there are six critical things you should verify — from licensing and insurance to customer reviews and response times.</p>
+              <a href="#" class="blog-card__link">Read Full Article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card blog-card--full" data-animate>
+            <a href="#" class="blog-card__img-link" aria-label="Read: No Plunger? 5 Creative Tips for Unclogging Your Toilet">
+              <img src="assets/images/image_004.jpg" alt="Clogged toilet with no plunger available" width="600" height="360" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">DIY Tips</span>
+              <time class="blog-card__date" datetime="2022-03-01">March 1, 2022</time>
+              <h2 class="blog-card__title"><a href="#">No Plunger? 5 Creative Tips for Unclogging Your Toilet</a></h2>
+              <p class="blog-card__excerpt">Flush. Nothing happens. And you don't have a plunger. Don't panic — here are five creative methods for unclogging a toilet without a plunger, from dish soap to hot water techniques.</p>
+              <a href="#" class="blog-card__link">Read Full Article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card blog-card--full" data-animate>
+            <a href="#" class="blog-card__img-link" aria-label="Read: 6 Signs That It's Time to Replace Your Water Heater">
+              <img src="assets/images/image_005.png" alt="Old water heater showing signs of wear and corrosion" width="600" height="360" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Water Heaters</span>
+              <time class="blog-card__date" datetime="2022-01-15">January 15, 2022</time>
+              <h2 class="blog-card__title"><a href="#">6 Signs That It's Time to Replace Your Water Heater</a></h2>
+              <p class="blog-card__excerpt">Can you imagine living without hot water? It's easy to take it for granted — until your water heater fails. Here are six warning signs that your unit is approaching the end of its life and needs replacement.</p>
+              <a href="#" class="blog-card__link">Read Full Article →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner" aria-labelledby="blog-cta-heading">
+      <div class="cta-banner__bg" aria-hidden="true"></div>
+      <div class="container cta-banner__inner">
+        <div class="cta-banner__content" data-animate>
+          <span class="cta-banner__eyebrow">Need a Plumber Now?</span>
+          <h2 class="cta-banner__title" id="blog-cta-heading">Stop Reading. Start Calling.</h2>
+          <p class="cta-banner__body">When a plumbing problem strikes, don't wait. Get a free quote from Tampa's most trusted plumbers.</p>
+          <div class="cta-banner__actions">
+            <a href="tel:8132389511" class="btn btn--accent btn--xl"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>Call (813) 238-9511</a>
+            <a href="contact.html" class="btn btn--outline-white btn--xl">Schedule Online</a>
+          </div>
+        </div>
+        <div class="cta-banner__ghost" aria-hidden="true">TIPS</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Pro Plumbing Services Corp — Home">
+          <div class="logo-mark"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect width="36" height="36" rx="6" fill="#6FCFFB"/><path d="M10 26 L14 22 L14 16 C14 13.8 15.8 12 18 12 C20.2 12 22 13.8 22 16 L22 18 C22 19.1 22.9 20 24 20 L26 20" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="20" r="2" fill="#0a1628"/><path d="M18 12 L18 9" stroke="#0a1628" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+          <div class="logo-text"><span class="logo-name">Pro Plumbing</span><span class="logo-tagline">Services Corp.</span></div>
+        </a>
+        <p class="footer__tagline">Family-owned plumbing excellence serving Tampa Bay since 1975.</p>
+        <address class="footer__contact">
+          <a href="tel:8132389511" class="footer__contact-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>(813) 238-9511</a>
+          <span class="footer__contact-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Tampa Bay Area, FL</span>
+        </address>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation — Services"><h3 class="footer__nav-title">Services</h3><ul class="footer__nav-list"><li><a href="residential.html">Residential Plumbing</a></li><li><a href="commercial.html">Commercial Plumbing</a></li><li><a href="services.html#drain-cleaning">Drain Cleaning</a></li><li><a href="services.html#water-heater">Water Heaters</a></li><li><a href="services.html#repiping">Repiping</a></li><li><a href="services.html#emergency">Emergency Service</a></li></ul></nav>
+      <nav class="footer__nav" aria-label="Footer navigation — Company"><h3 class="footer__nav-title">Company</h3><ul class="footer__nav-list"><li><a href="index.html">Home</a></li><li><a href="services.html">All Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="contact.html#quote">Free Quote</a></li></ul></nav>
+      <div class="footer__emergency"><h3 class="footer__nav-title">Emergency?</h3><p>We're available 24 hours a day, 7 days a week — even on holidays.</p><a href="tel:8132389511" class="btn btn--accent">Call Now</a><div class="footer__hours"><strong>Available 24/7</strong><span>Emergency Service Always On</span></div></div>
+    </div>
+    <div class="footer__bottom"><div class="container footer__bottom-inner"><p>&copy; <span id="year"></span> Pro Plumbing Services Corp. All rights reserved.</p><p>Serving Tampa Bay, FL since 1975</p></div></div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
